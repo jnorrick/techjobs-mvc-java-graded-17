@@ -36,7 +36,7 @@ public class SearchController {
             jobs = JobData.findByColumnAndValue(searchType, searchTerm);
         }
         model.addAttribute("jobs", jobs);
-        model.addAttribute("columns", columnChoices);
+        model.addAttribute("title", "Jobs with " + columnChoices.get(searchType) + ": " + searchTerm);
         return "search";
     }
         // TODO #3 - Create a handler to process a search request and render the updated search view.
